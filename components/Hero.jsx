@@ -25,7 +25,7 @@ export default function Hero() {
               videoSrc="/videos/profile-hover.mp4"
               alt="Profile"
             />
-            <p className="absolute -top-8 -left-12 text-2xl text-gray-300 -rotate-15 font-hand">Give a High Five</p>
+            <p className="absolute -top-6 -left-6 md:-top-8 md:-left-12 sm:text-xl md:text-2xl text-gray-300 -rotate-15 font-hand">Give a High Five</p>
           </motion.div>
 
           <div>
@@ -35,7 +35,7 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              BHRIGU <span className="text-2xl font-light text-gray-400">( vreé-goo )</span><br/>
+              BHRIGU <span className="text-sm md:text-2xl font-light text-gray-400">( vreé-goo )</span><br/>
               KUMAR DEKA
             </motion.h1>
 
