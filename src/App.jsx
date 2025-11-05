@@ -18,7 +18,7 @@ export default function Portfolio() {
       <hr className='bg-gray-700 max-w-4xl mx-auto h-[1.5px]'/>
       <Skills />
       
-      <footer className="py-8 border-t border-slate-900 text-center text-slate-500 text-sm mb-2">
+      <footer className="py-8 border-t border-slate-900 text-center text-slate-500 text-sm">
         <p>© 2025 All rights reserved.</p>
       </footer>
     </div>
