@@ -1,40 +1,46 @@
 import { SocialButton } from "./SocialButton";
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Github, Linkedin, Mail, Twitter, Download} from 'lucide-react';
+import HeroImage from "../components/HeroImage.jsx";
+
 
 export default function Hero() {
   return (
     <section className="min-h-[80vh] bg-black text-white flex items-center justify-center px-6 pt-20">
-      <div className="max-w-3xl">
+      <div className="max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="flex items-start gap-6 mb-8"
         >
+
           <motion.div
-            className="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-slate-800"
+            className="w-24 h-24 rounded-full shrink-0 border-2 border-slate-800 relative flex items-center justify-center bg-slate-900 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <img
-              src="/images/profile/Gemini_Generated_Image_ekso3fekso3fekso.png"
+            <HeroImage
+              src="/images/profile/profileHi.png"
+              videoSrc="/videos/profile-hover.mp4"
               alt="Profile"
-              className="w-full h-full object-cover"
             />
+            <p className="absolute -top-8 -left-12 text-2xl text-gray-300 -rotate-15 font-hand">Give a High Five</p>
           </motion.div>
+
           <div>
             <motion.h1
-              className="text-4xl font-bold mb-2 tracking-tight"
+              className="text-3xl font-bold mb-2 tracking-tight"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              BHRIGU KUMAR DEKA
+              BHRIGU <span className="text-2xl font-light text-gray-400">( vreé-goo )</span><br/>
+              KUMAR DEKA
             </motion.h1>
 
             <motion.p
-  className="relative inline-block bg-linear-to-r from-slate-400 via-lime-400 to-slate-400 bg-size-[200%_100%] text-transparent bg-clip-text animate-shimmer"
+  className="relative inline-block bg-linear-to-r from-slate-500 via-lime-400 to-slate-500 bg-size-[200%_100%] text-transparent bg-clip-text animate-shimmer"
   initial={{ opacity: 0, x: -20 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ delay: 0.3 }}
@@ -55,7 +61,7 @@ export default function Hero() {
             I'm Bhrigu, aka Dexter, a Designer and Developer dedicated to crafting engaging digital experiences. Visual aesthetics are always interesting to me. The bridge between creativity and functionality is something I care about and dream to master.
           </p>
           <p className="text-sm font-light">
-            Started as an Digital Artist, Ventured into Graphic Design, and finally found my passion in UI/UX Design and Frontend Development. I love bringing ideas to life through thoughtful design and clean code.
+            Started as an Digital Artist, ventured into Graphic Design, and finally found my passion in UI/UX Design and Frontend Development. I love bringing ideas to life through thoughtful design and clean code.
           </p>
         </motion.div>
 

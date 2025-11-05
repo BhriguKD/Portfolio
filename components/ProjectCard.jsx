@@ -9,7 +9,7 @@ export const ProjectCard = ({ project, index }) => {
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-full group relative block rounded-xl overflow-hidden border border-slate-900 hover:border-slate-600 transition-all cursor-pointer"
+      className="w-full group relative block rounded-xl overflow-hidden border border-slate-900 transition-all cursor-pointer"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -28,27 +28,13 @@ export const ProjectCard = ({ project, index }) => {
 
       {/* Gradient overlay with blur that disappears on hover */}
       <motion.div
-        className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent"
+        className="absolute inset-0 bg-linear-to-t from-black  to-transparent"
         animate={{
-          backdropFilter: isHovered ? "blur(0px)" : "blur(4px)",
+          backdropFilter: isHovered ? "blur(0px)" : "blur(1px)",
           opacity: isHovered ? 0.1 : 1,
         }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       />
-
-      {/* Metallic shimmer line */}
-      {/* <motion.div
-        className="absolute inset-0 bg-linear-to-r from-transparent via-black/20 to-transparent opacity-0 mix-blend-overlay"
-        animate={{
-          x: isHovered ? ["-100%", "100%"] : "-100%",
-          opacity: isHovered ? [0, 0.8, 0] : 0,
-        }}
-        transition={{
-          duration: 1.2,
-          ease: "easeInOut",
-          repeat: isHovered ? Infinity : 0,
-        }}
-      /> */}
 
       {/* Text Overlay (fades out on hover) */}
       <motion.div
@@ -58,7 +44,7 @@ export const ProjectCard = ({ project, index }) => {
       >
         <div className="space-y-2">
           <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-          <p className="text-slate-200 text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">
+          <p className="text-slate-200 text-xs sm:text-xs leading-4">
             {project.description}
           </p>
 

@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 export const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
-      className="relative pl-8 border-l-2 border-slate-800 hover:border-slate-700 transition-colors"
+      className="relative pl-8 border-l border-slate-800 hover:border-slate-700 transition-colors"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
@@ -22,7 +22,7 @@ export const ExperienceCard = ({ experience, index }) => {
           <span className="text-slate-500 text-sm" >{experience.period}</span>
         </div>
         
-        <p className="text-slate-400 mb-4 leading-relaxed">
+        <p className="text-slate-400 mb-4 leading-relaxed text-sm">
           {experience.description}
         </p>
 

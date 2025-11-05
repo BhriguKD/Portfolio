@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Reenie+Beanie&display=swap");
 @import "tailwindcss";
 
 :root {
-  --font-sans : 'Bricolage Grotesque', sans-serif;
+  --font-sans: "Bricolage Grotesque", sans-serif;
+  --font-hand: "Reenie Beanie", cursive;
+}
+
+.font-hand {
+  font-family: var(--font-hand);
 }
 
 @keyframes shimmer {

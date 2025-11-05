@@ -5,7 +5,7 @@ export default function Project (){
   const projects = [
     {
       title: 'Orders',
-      description: 'A unified platform to calm the cluttered and decentralized system of e-commerce platforms. Seamlessly manage orders and return windows from multiple brands in one place.',
+      description: 'A unified platform to manage the decentralized system of e-commerce platforms. Seamlessly manage orders and return windows from multiple brands in one place.',
       tags: ['Figma', 'Balsamiq', 'Miro', 'Prototyping', 'Gen AI'],
       link: 'https://www.figma.com/proto/0Ym2EXSxhoravrc2XL7vYM/Orders?page-id=350%3A8003&node-id=350-8004&viewport=133%2C292%2C0.3&t=Oj4hKskcTb7VC5kl-1&scaling=contain&content-scaling=fixed',
       year: '2025',
@@ -21,7 +21,7 @@ export default function Project (){
     },
     {
       title: 'Archon',
-      description: 'SIH project. A RAG platform that leverages AI to provide accurate and contextually relevant answers from policies and amendments, enhancing productivity and information retrieval.',
+      description: 'SIH project. A RAG platform that leverages AI to provide contextually relevant answers from policies and amendments, enhancing information retrieval.',
       tags: ['SIH','Figma', 'UI Design', 'Prototyping', 'User Research'],
       link: 'https://www.figma.com/proto/GGStlrHc9eBRQHqR5lxvKz/SIH?page-id=2%3A11&node-id=70-118&viewport=1270%2C-514%2C0.2&t=d3bRQRokhmUtkRay-1&scaling=contain&content-scaling=fixed',
       year: '2025',
@@ -39,7 +39,7 @@ export default function Project (){
 
   return (
     <section className="min-h-screen bg-black text-white px-4 sm:px-6 py-12 sm:py-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

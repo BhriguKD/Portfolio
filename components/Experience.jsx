@@ -21,7 +21,7 @@ export default function Experience() {
 
   return (
     <section className=" bg-black text-white px-6 py-20">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,0 +1,59 @@
+import { useState, useRef, useEffect } from "react";
+
+export default function HeroImage({ src, videoSrc, alt }) {
+  const [isActive, setIsActive] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    setIsActive(true);
+    videoRef.current?.play();
+  };
+
+  const handleMouseLeave = () => {
+    setIsActive(false);
+    videoRef.current?.pause();
+    videoRef.current.currentTime = 0;
+  };
+
+  // For mobile/touch devices
+  const handleTouch = () => {
+    // Toggle playback when tapped
+    if (isActive) {
+      handleMouseLeave();
+    } else {
+      handleMouseEnter();
+    }
+  };
+
+  return (
+    <div
+      className="relative w-24 h-24 rounded-full overflow-hidden cursor-pointer select-none"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouch} //enables mobile tap
+    >
+      {/* Default Image */}
+      <img
+        src={src}
+        alt={alt}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+          isActive ? "opacity-0" : "opacity-100"
+        }`}
+      />
+
+      {/* Hover/Tap Video */}
+      <video
+        ref={videoRef}
+        src={videoSrc}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+          isActive ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    </div>
+  );
+}
+
