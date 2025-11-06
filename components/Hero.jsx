@@ -72,21 +72,23 @@ export default function Hero() {
           transition={{ delay: 0.6 }}
         >
           <motion.button
-            className="px-4 py-2 hover:bg-slate-800 rounded-lg flex items-center gap-2 text-sm transition-colors"
+            className="px-4 py-2 rounded-lg flex items-center gap-2 text-sm transition-colors"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             Itching Creativity
           </motion.button>
-          <motion.button
-            className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg flex items-center gap-2 text-sm transition-colors"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <Download className="w-4 h-4" />
-            Download CV
-          </motion.button>
+          <a href="https://drive.google.com/file/d/1tortAgQQDzzpAskSDFhUt3wYgSdlyq6P/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <motion.button
+              className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg flex items-center gap-2 text-sm transition-colors cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Download className="w-4 h-4" />
+              View CV
+            </motion.button>
+          </a>
         </motion.div>
 
         <motion.div
